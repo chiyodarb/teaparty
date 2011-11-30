@@ -36,4 +36,5 @@ end
 
 group :development do
   # db adapters for development
+  gem 'sqlite3'
 end
