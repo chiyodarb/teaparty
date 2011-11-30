@@ -33,3 +33,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
 end
+
+group :development do
+  # db adapters for development
+end
