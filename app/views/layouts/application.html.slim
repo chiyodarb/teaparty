@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title Chiyoda.rb After Work Teaparty
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application" 
+    = csrf_meta_tags 
+  body
+    = yield

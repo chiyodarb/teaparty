@@ -1,11 +1,13 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
+gem 'slim'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'sqlite3', :group => [:test, :development]
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -32,9 +34,4 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', '~> 0.8.3', :require => false
-end
-
-group :development do
-  # db adapters for development
-  gem 'sqlite3'
 end
