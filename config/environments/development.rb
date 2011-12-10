@@ -27,6 +27,8 @@ Teaparty::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.sass.preferred_syntax = :sass
 end
 
 Slim::Engine.set_default_options :pretty => true
