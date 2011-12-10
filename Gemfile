@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.3'
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+  :git => 'git://github.com/anjlab/bootstrap-rails.git'
 gem 'slim'
 
 # Bundle edge Rails instead:
