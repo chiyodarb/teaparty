@@ -9,8 +9,21 @@ html
     = csrf_meta_tags 
     sass:
       body
-        padding-top: 60px
-
+        padding-top: 40px
+        background: #441010
+      .topbar
+        a
+          color: #CFAFAF
+        .fill
+          background: #660808
+          .container
+            background: #822
+            padding: 0px 20px
+      .container
+        padding: 10px 20px
+        background: #FFF
+      .hero-unit
+        background: #FEE0E0
   body
     = render 'layouts/topbar'
     .container
