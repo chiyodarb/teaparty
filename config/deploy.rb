@@ -23,16 +23,12 @@ role :db,  host, :primary => true # This is where Rails migrations will run
 # these http://github.com/rails/irs_process_scripts
 
 load 'deploy/assets'
+require 'bundler/capistrano'
 
 after "deploy:update_code", "deploy:assets:precompile"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
-  task :bundle do
-    target = "public/system/bundle"
-    run "cd #{deploy_to}/#{current_dir}; bundle install --path #{target}"
-  end
-
   task :start do
     cd_to = "cd #{deploy_to}/#{current_dir}"
     run "#{cd_to}; bundle exec unicorn -c unicorn.conf.rb -E production -D"
