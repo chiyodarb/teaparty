@@ -2,6 +2,7 @@ set :application, "teaparty"
 set :scm,         :git
 set :git_shallow_clone, 1
 set :repository,  "git@github.com:chiyodarb/teaparty.git"
+set :branch,      "master"
 set :deploy_via,  :remote_cache
 set :deploy_to,   "/mnt/app/#{application}"
 set :user,        "app"
