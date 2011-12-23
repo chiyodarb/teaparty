@@ -10,6 +10,7 @@ gem 'slim'
 
 gem 'pg'
 gem 'sqlite3', :group => [:test, :development]
+gem 'unicorn'
 
 # Gems used only for assets and not required
 # in production environments by default.
