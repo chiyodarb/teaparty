@@ -26,7 +26,6 @@ role :db,  host, :primary => true # This is where Rails migrations will run
 
 require 'bundler/capistrano'
 
-after "deploy:update_code", "deploy:assets:precompile"
 after "deploy:update_code", "deploy:symlink_db"
 
 # If you are using Passenger mod_rails uncomment this:
