@@ -1,7 +1,7 @@
 set :application, "teaparty"
 set :scm,         :git
 set :git_shallow_clone, 1
-set :repository,  "ssh://git.s21g.com/mnt/git/teaparty.git"
+set :repository,  "git@github.com:chiyodarb/teaparty.git"
 set :deploy_via,  :remote_cache
 set :deploy_to,   "/mnt/app/#{application}"
 set :user,        "app"
