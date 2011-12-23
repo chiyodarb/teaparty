@@ -26,6 +26,7 @@ load 'deploy/assets'
 require 'bundler/capistrano'
 
 after "deploy:update_code", "deploy:assets:precompile"
+after "deploy:update_code", "deploy:symlink_db"
 
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
@@ -40,7 +41,7 @@ namespace :deploy do
     run "kill -QUIT `#{get_pid}`"
   end
 
-  task :after_symlink do
+  task :symlink_db do
     run "ln -s #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"                                                          
   end 
 end
