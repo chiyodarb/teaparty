@@ -9,6 +9,7 @@ set :user,        "app"
 set :use_sudo,    false
 set :rails_env,   "production"
 set :normalize_asset_timestamps, false
+set :rake,        "bundle exec rake"
 
 ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/ec2-s21g.pem"]
 ssh_options[:username] = `id -un`.chomp
