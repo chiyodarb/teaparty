@@ -24,6 +24,8 @@ role :db,  host, :primary => true # This is where Rails migrations will run
 
 load 'deploy/assets'
 
+after "deploy:update_code", "deploy:assets:precompile"
+
 # If you are using Passenger mod_rails uncomment this:
 namespace :deploy do
   task :bundle do
