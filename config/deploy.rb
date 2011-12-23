@@ -38,4 +38,8 @@ namespace :deploy do
     run "kill -USR2 `#{get_pid}`"
     run "kill -QUIT `#{get_pid}`"
   end
+
+  task :after_symlink do
+    run "ln -s #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"                                                          
+  end 
 end
