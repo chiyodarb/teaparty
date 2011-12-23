@@ -4,6 +4,7 @@ gem 'rails', '3.1.3'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
   :git => 'git://github.com/anjlab/bootstrap-rails.git'
 gem 'slim'
+gem 'rake', '0.9.2'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
