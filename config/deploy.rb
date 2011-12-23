@@ -8,6 +8,7 @@ set :deploy_to,   "/mnt/app/#{application}"
 set :user,        "app"
 set :use_sudo,    false
 set :rails_env,   "production"
+set :normalize_asset_timestamps, false
 
 ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/ec2-s21g.pem"]
 ssh_options[:username] = `id -un`.chomp
