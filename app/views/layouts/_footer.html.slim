@@ -1,0 +1,17 @@
+p &copy; Chiyoda.rb 2011
+/.list
+  .copyright &copy; Chiyoda.rb 2011
+  - url = url_for :only_path => false
+  .button.button1
+    script type='text/javascript' src="http://apis.google.com/js/plusone.js"
+    .g-plusone data-size=:medium data-count=false data-href=url data-lang=:ja
+  .button.button2
+    a.twitter-share-button{href="http://twitter.com/share"
+      data-count=:horizontal data-url=url data-lang=:ja} Tweet
+    script type="text/javascript" src="http://platform.twitter.com/widgets.js"
+  .button.button3
+    - base = "http://www.facebook.com/plugins/like.php?href="
+    - options = "&layout=button_count&show_faces=true&width=100&action=like&font&colorscheme=light&height=21"
+    - style = "border:none; overflow:hidden; width:100px; height:21px;"
+    iframe{src=base+URI.escape(url)+options scrolling=:no frameborder=0
+      style=style allowTransparency=true}
